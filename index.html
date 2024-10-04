@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dream Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#book">Book Now</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section 1: Welcome and Search -->
+    <section id="home">
+        <div>
+            <h1>Welcome to Your Dream Travel</h1>
+            <p>Your gateway to unforgettable destinations</p>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search your destination...">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 2: Book Now -->
+    <section id="book">
+        <div>
+            <h2>Book Your Next Adventure</h2>
+            <div class="destination-container">
+                <!-- Displaying multiple destinations -->
+                <div class="destination" id="destination-goa">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTxpWOodhHvvL7GqyIOeugaus1D_ZlNhY7KM7lk321hqq4vBKD5mi9di8TEe0CPW5j0Os&usqp=CAU"
+                        alt="Goa">
+                    <div class="destination-content">
+                        <h3>Goa</h3>
+                        <p>Experience the sun, sand, and vibrant nightlife in Goa.</p>
+                        <p class="budget">Starting at $500</p>
+                        <button class="read-more"
+                            onclick="showDetails('Goa', 'Goa is a vibrant coastal paradise in India, renowned for it’s stunning beaches, lively nightlife, and rich Portuguese heritage. Its a favorite destination for travelers seeking sun, sea, adventure sports, and cultural experiences. From relaxing by the beach to exploring its historic forts and churches, Goa offers something for everyone.')">Read
+                            More</button>
+                        <button class="book-now" onclick="alert('Booking for Goa')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="destination" id="destination-shimla">
+                    <img src="https://img.wattpad.com/880ef214f10d6f01ac79d64c86d6ce9b935f0952/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f46534f6f38376451664b585731413d3d2d3937333230363432312e3136343231616663303764363063316238333336363538323539372e676966"
+                        alt="Shimla">
+                    <div class="destination-content">
+                        <h3>Shimla</h3>
+                        <p>Escape to the hills of Shimla for a serene getaway.</p>
+                        <p class="budget">Starting at $400</p>
+                        <button class="read-more"
+                            onclick="showDetails('Shimla', 'Shimla, the capital of Himachal Pradesh, is a charming hill station known for it’s scenic beauty, colonial architecture, and pleasant climate. Nestled in the Himalayas, its a popular destination for nature lovers and those seeking a peaceful retreat amidst lush forests and snow-capped mountains.')">Read
+                            More</button>
+                        <button class="book-now" onclick="alert('Booking for Shimla')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="destination" id="destination-manali">
+                    <img src="https://www.travelpack.in/public/imagedb/sysimgdocs/rszimages/Manali-Volvo-Packages_pk29341_1.gif"
+                        alt="Manali">
+                    <div class="destination-content">
+                        <h3>Manali</h3>
+                        <p>Discover adventure and beauty in the picturesque town of Manali.</p>
+                        <p class="budget">Starting at $450</p>
+                        <button class="read-more"
+                            onclick="showDetails('Manali', 'Manali is a picturesque hill station in Himachal Pradesh, nestled in the northern Himalayas. Known for it’s breathtaking landscapes, snow-capped mountains, and adventurous activities like trekking, skiing, and paragliding, Manali attracts nature lovers and thrill-seekers alike. Its serene valleys, rivers, and ancient temples make it a favorite getaway for travelers.')">Read
+                            More</button>
+                        <button class="book-now" onclick="alert('Booking for Manali')">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Additional Destinations -->
+                <div class="destination" id="destination-udaipur">
+                    <img src="https://i.makeagif.com/media/2-18-2016/U_bmbz.gif" alt="Udaipur">
+                    <div class="destination-content">
+                        <h3>Udaipur</h3>
+                        <p>Known as the City of Lakes, Udaipur offers beautiful palaces and a rich cultural heritage.
+                        </p>
+                        <p class="budget">Starting at $600</p>
+                        <button class="read-more"
+                            onclick="showDetails('Udaipur', 'Udaipur, often called the City of Lakes, is a beautiful city in Rajasthan, known for its rich history, royal palaces, and scenic lakes like Lake Pichola and Fateh Sagar. The citys majestic architecture, including the City Palace and Jag Mandir, reflects the grandeur of the Rajput era. Surrounded by the Aravalli Hills, Udaipur offers a serene and romantic atmosphere, making it a popular destination for travelers and couples. Its vibrant culture and artistic heritage add to its charm.')">Read
+                            More</button>
+                        <button class="book-now" onclick="alert('Booking for Udaipur')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="destination" id="destination-kerala">
+                    <img src="https://i.makeagif.com/media/8-22-2017/i7BXb_.gif" alt="Kerala">
+                    <div class="destination-content">
+                        <h3>Kerala</h3>
+                        <p>Experience the backwaters, beaches, and lush green landscapes of Kerala.</p>
+                        <p class="budget">Starting at $700</p>
+                        <button class="read-more"
+                            onclick="showDetails('Kerala', 'Kerala, known as God’s Own Country, is a tropical paradise in southern India renowned for it’s lush landscapes, tranquil backwaters, and pristine beaches. The state’s rich cultural heritage includes traditional art forms like Kathakali and Ayurveda, making it a hub for wellness tourism. Kerala is also famous for its spice plantations, wildlife sanctuaries, and the scenic beauty of the Western Ghats, offering a unique blend of natural beauty, culture, and history.')">Read
+                            More</button>
+                        <button class="book-now" onclick="alert('Booking for Kerala')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="destination" id="destination-darjeeling">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShFpnASTsTadxARUURHfU5ig6Ie-VXCbiC7qI0wISJvTOKCEY3avE2IZWJ0eaQUDOfLpk&usqp=CAU"
+                        alt="Darjeeling">
+                    <div class="destination-content">
+                        <h3>Darjeeling</h3>
+                        <p>Famous for its tea gardens and stunning views of the Himalayas.</p>
+                        <p class="budget">Starting at $500</p>
+                        <button class="read-more"
+                            onclick="showDetails('Darjeeling', 'Darjeeling, a picturesque hill station in West Bengal, is renowned for its stunning views of the Himalayas, especially the majestic Kanchenjunga peak. Famous for its tea plantations, Darjeeling produces some of the world’s finest tea. The town offers a serene blend of colonial-era architecture, Buddhist monasteries, and the charming Darjeeling Himalayan Railway, a UNESCO World Heritage site. With its cool climate and lush landscapes, it’s a popular destination for nature lovers and adventure enthusiasts.')">Read
+                            More</button>
+                        <button class="book-now" onclick="alert('Booking for Darjeeling')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="destination" id="destination-rajasthan">
+                    <img src="https://i.makeagif.com/media/1-28-2014/gRjPkI.gif" alt="Rajasthan">
+                    <div class="destination-content">
+                        <h3>Rajasthan</h3>
+                        <p>Immerse yourself in the royal history and desert landscapes of Rajasthan.</p>
+                        <p class="budget">Starting at $800</p>
+                        <button class="read-more"
+                            onclick="showDetails('Rajasthan', 'Rajasthan, the largest state in India, is known for its rich history, vibrant culture, and stunning desert landscapes. Often called the Land of Kings, it boasts grand palaces, majestic forts, and intricately carved temples. Cities like Jaipur, Udaipur, and Jodhpur are famous for their architectural splendor and royal heritage. Rajasthan is also home to the Thar Desert, colorful festivals, traditional folk music and dance, and a thriving handicrafts market, making it a major tourist destination that reflects India’s regal past and artistic traditions.')">Read
+                            More</button>
+                        <button class="book-now" onclick="alert('Booking for Rajasthan')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="destination" id="destination-leh-ladakh">
+                    <img src="https://static2.tripoto.com/media/transfer/img/496775/TripDocument/1589457855_abc_1.gif"
+                        alt="Leh-Ladakh">
+                    <div class="destination-content">
+                        <h3>Leh-Ladakh</h3>
+                        <p>Experience the stunning landscapes and rich culture of Leh-Ladakh.</p>
+                        <p class="budget">Starting at $900</p>
+                        <button class="read-more"
+                            onclick="showDetails('Leh-Ladakh', 'Leh-Ladakh, located in the northernmost region of India, is known for its stunning landscapes, high-altitude mountain passes, and unique Buddhist culture. Often called the Land of High Passes, Ladakh is home to majestic monasteries, crystal-clear lakes like Pangong and Tso Moriri, and rugged terrain perfect for adventure enthusiasts. The region offers a blend of serene beauty and thrilling experiences, making it a popular destination for trekkers, bikers, and those seeking spiritual retreats in the lap of the Himalayas.')">Read
+                            More</button>
+                        <button class="book-now" onclick="alert('Booking for Leh-Ladakh')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="destination" id="destination-andaman">
+                    <img src="https://assets.vogue.in/photos/6274d9cedf2aeda1f8f79c95/2:3/w_2560%2Cc_limit/Andaman-Meghalaya%2520gif.gif"
+                        alt="Andaman">
+                    <div class="destination-content">
+                        <h3>Andaman and Nicobar Islands</h3>
+                        <p>Relax on the pristine beaches and enjoy water sports in the Andaman Islands.</p>
+                        <p class="budget">Starting at $750</p>
+                        <button class="read-more"
+                            onclick="showDetails('Andaman', 'The Andaman and Nicobar Islands, located in the Bay of Bengal, are a group of picturesque islands known for their pristine beaches, turquoise waters, and lush tropical forests. This remote paradise is a haven for nature lovers and adventure enthusiasts, offering activities like snorkeling, scuba diving, and exploring coral reefs teeming with marine life. The islands also have a rich history, with landmarks like the Cellular Jail in Port Blair, reflecting their significance during India’s freedom struggle.')">Read
+                            More</button>
+                        <button class="book-now" onclick="alert('Booking for Andaman')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="destination" id="destination-rishikesh">
+                    <img src="https://www.travelpack.com/public/imagedb/sysimgdocs/rszimages/Rishikesh-Yoga-Meditation-Nature-Walk_pk28703_1.gif"
+                        alt="Rishikesh">
+                    <div class="destination-content">
+                        <h3>Rishikesh</h3>
+                        <p>Known as the Yoga Capital of the World, Rishikesh offers spiritual experiences.</p>
+                        <p class="budget">Starting at $400</p>
+                        <button class="read-more"
+                            onclick="showDetails('Rishikesh', 'Rishikesh, located in the foothills of the Himalayas along the Ganges River, is a renowned spiritual hub and adventure destination in India. Known as the Yoga Capital of the World, it attracts seekers for meditation, yoga, and spiritual enlightenment. It is also famous for its scenic beauty, sacred temples, and the iconic Laxman Jhula bridge. For adventure lovers, Rishikesh offers thrilling activities like white-water rafting, trekking, and camping by the river.')">Read
+                            More</button>
+                        <button class="book-now" onclick="alert('Booking for Rishikesh')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="destination" id="destination-hampi">
+                    <img src="https://www.travelpack.com/public/imagedb/sysimgdocs/rszimages/Hampi-Deccan_pk24608_1.gif"
+                        alt="Hampi">
+                    <div class="destination-content">
+                        <h3>Hampi</h3>
+                        <p>A UNESCO World Heritage Site, Hampi is known for its ancient temples and ruins.</p>
+                        <p class="budget">Starting at $500</p>
+                        <button class="read-more"
+                            onclick="showDetails('Hampi', 'Hampi is a UNESCO World Heritage Site located in Karnataka, India, known for its stunning ruins and rich history. Once the capital of the Vijayanagara Empire in the 14th century, it features impressive temples, intricate sculptures, and captivating landscapes dotted with large boulders. The iconic Virupaksha Temple and the Vittala Temple, famous for its stone chariot, are key attractions. Hampi’s unique blend of history, culture, and natural beauty makes it a must-visit destination for travelers and history enthusiasts alike.')">Read
+                            More</button>
+                        <button class="book-now" onclick="alert('Booking for Hampi')">Book Now</button>
+                    </div>
+                </div>
+
+
+
+                <div class="destination" id="destination-mumbai">
+                    <img src="https://64.media.tumblr.com/1a152a646a1f973fe9e7b197fb052730/tumblr_inline_pjzrkr8poh1qa7lan_500.gifv"
+                        alt="vindavan">
+                    <div class="destination-content">
+                        <h3>Mumbai</h3>
+                        <p>The bustling city of Mumbai is known for its vibrant culture and nightlife.</p>
+                        <p class="budget">Starting at $500</p>
+                        <button class="read-more"
+                            onclick="showDetails('Mumbai', 'Mumbai, often referred to as the financial capital of India, is a bustling metropolis known for its vibrant culture, diverse population, and iconic landmarks. The city is home to Bollywood, India’s film industry, and features attractions like the Gateway of India, Marine Drive, and the historic Elephanta Caves. With its rich history, bustling markets, and a mix of modern and colonial architecture, Mumbai offers a unique blend of tradition and contemporary life, making it a dynamic destination for tourists and locals alike.')">Read
+                            More</button>
+                        <button class="book-now" onclick="alert('Booking for Mumbai')">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Add more destinations in the same way -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: About Us -->
+    <footer>
+        <section id="about" class="about-section">
+            <h2>About Our Travel Services</h2>
+            <p>
+                At Your Dream Travel, we specialize in crafting personalized travel experiences that cater to every
+                traveler’s dream. Whether you’re
+                looking for a relaxing getaway, an adventurous tour, or a cultural exploration, we offer tailored
+                packages that suit your preferences.
+            </p>
+
+        </section>
+
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Contact Us</h3>
+                <p>Email: Gaurav@gmail.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: Yog bhawan, Raipur, India</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Destination Details -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+</body>
+
+</html>
